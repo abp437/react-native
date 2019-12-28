@@ -7,6 +7,8 @@ import {
   TextInput,
   ScrollView,
 } from 'react-native';
+// import FlatListComp from './FlatList';
+import TodoList from './todo-list/TodoList';
 
 const App = () => {
   const [name, setName] = useState('Akshay');
@@ -35,7 +37,7 @@ const App = () => {
 
   return (
     <>
-      <View style={styles.container}>
+      {/* <View style={styles.container}>
         <Text>
           His name is {personName} and his age is {personAge}
         </Text>
@@ -60,8 +62,8 @@ const App = () => {
           }}
         />
         <Text>Mein age is {age}</Text>
-      </View>
-      <ScrollView style={styles.listContainer}>
+      </View> */}
+      {/* <ScrollView style={styles.listContainer}>
         {people.map(item => {
           const {key, name} = item;
           let viewStyle = styles.item;
@@ -77,7 +79,9 @@ const App = () => {
             </View>
           );
         })}
-      </ScrollView>
+      </ScrollView> */}
+      {/* <FlatListComp /> */}
+      <TodoList />
     </>
   );
 };
