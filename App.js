@@ -7,8 +7,9 @@ import {
   TextInput,
   ScrollView
 } from "react-native";
-// import FlatListComp from './FlatList';
-import TodoList from "./todo-list/TodoList";
+// import FlatListComp from "./FlatList";
+// import TodoList from "./todo-list/TodoList";
+import Navigation from "./routes/HomeStack";
 
 const App = () => {
   const [name, setName] = useState("Akshay");
@@ -81,7 +82,8 @@ const App = () => {
         })}
       </ScrollView> */}
       {/* <FlatListComp /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      <Navigation />
     </>
   );
 };
