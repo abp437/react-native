@@ -1,6 +1,16 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, Button } from "react-native";
 
-const Home = () => <Text>Home</Text>;
+const Home = ({ navigation }) => (
+  <>
+    <Text>Home</Text>
+    <Button
+      onPress={() => {
+        navigation.navigate("ReviewDetails");
+      }}
+      title="Go to Review Details"
+    />
+  </>
+);
 
 export default Home;
