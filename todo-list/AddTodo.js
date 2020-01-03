@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, TextInput, Button} from 'react-native';
+import React, { useState } from "react";
+import { View, StyleSheet, TextInput, Button } from "react-native";
 
-const AddTodo = ({submitHandler}) => {
-  const [text, setText] = useState('');
-  const changeHandler = (value) => {
+const AddTodo = ({ submitHandler }) => {
+  const [text, setText] = useState("");
+  const changeHandler = value => {
     setText(value);
   };
 
@@ -14,9 +14,13 @@ const AddTodo = ({submitHandler}) => {
         placeholder="New Todo"
         style={styles.input}
       />
-      <Button onPress={() => {
-        submitHandler(text);
-      }} title='Add Todo' color='coral' />
+      <Button
+        onPress={() => {
+          submitHandler(text);
+        }}
+        title="Add Todo"
+        color="coral"
+      />
     </View>
   );
 };
@@ -27,7 +31,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 6,
     borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    borderBottomColor: "#ddd"
   }
 });
 
