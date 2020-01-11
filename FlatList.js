@@ -12,7 +12,7 @@ const FlatListComp = () => {
     { name: "Bowser", id: "7" }
   ]);
 
-  const pressHandler = id => {
+  const pressHandler = id => () => {
     setPeople(people.filter(person => person.id !== id));
   };
 
@@ -21,7 +21,7 @@ const FlatListComp = () => {
       keyExtractor={item => item.id}
       data={people}
       renderItem={({ item }) => (
-        <TouchableOpacity onPress={() => pressHandler(item.id)}>
+        <TouchableOpacity onPress={pressHandler(item.id)}>
           <Text>{item.name}</Text>
         </TouchableOpacity>
       )}
