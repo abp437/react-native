@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Animated, View } from "react-native";
 
-const Ball = () => {
-  const [ballPosition, setBallPosition] = useState(
-    new Animated.ValueXY({ x: 100, y: 200 })
-  );
+const ballPosition = new Animated.ValueXY({ x: 100, y: 200 });
 
+const Ball = () => {
   useEffect(() => {
     Animated.spring(ballPosition, {
       toValue: { x: 200, y: 500 }

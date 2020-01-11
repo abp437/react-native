@@ -1,5 +1,5 @@
-import React from "react";
-import { Animated, ScrollView, Text, View } from "react-native";
+import React, { useState } from "react";
+import { Animated, PanResponder, ScrollView, Text, View } from "react-native";
 import { Button, Card } from "react-native-elements";
 
 const renderCards = data =>
@@ -14,6 +14,30 @@ const renderCards = data =>
     </Card>
   ));
 
-const Deck = ({ data }) => <ScrollView>{renderCards(data)}</ScrollView>;
+const cardPosition = new Animated.ValueXY();
+
+const panResponder = PanResponder.create({
+  onStartShouldSetPanResponder: () => {
+    return true;
+  },
+  onPanResponderMove: (event, gesture) => {
+    const { dx, dy } = gesture;
+    cardPosition.setValue({ x: dx, y: dy });
+  },
+  onPanResponderRelease: event => {
+    console.log(event);
+  }
+});
+
+const Deck = ({ data }) => {
+  return (
+    <Animated.View
+      style={cardPosition.getLayout()}
+      {...panResponder.panHandlers}
+    >
+      {renderCards(data)}
+    </Animated.View>
+  );
+};
 
 export default Deck;
