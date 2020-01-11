@@ -7,6 +7,7 @@ import {
   TextInput,
   ScrollView
 } from "react-native";
+import Ball from "./src/Ball";
 /*
   import FlatListComp from "./FlatList";
   import TodoList from "./todo-list/TodoList";
@@ -90,9 +91,7 @@ const App = () => {
         <TodoList />
         <Navigation />
       */}
-      <View>
-        <Text>Hello World</Text>
-      </View>
+      <Ball />
     </>
   );
 };
