@@ -13,6 +13,14 @@ import {
 
 const screenWidth = Math.round(Dimensions.get("window").width);
 
+// Hitler Images Link:
+// https://media.gettyimages.com/photos/german-fuhrer-and-nazi-leader-adolf-hitler-addresses-soldiers-with-picture-id2696364?s=2048x2048
+// https://media.gettyimages.com/photos/november-9-1938-march-through-munich-in-remembrance-of-the-putsch-l-picture-id92937366?s=2048x2048
+// https://media.gettyimages.com/photos/adolf-hitler-chancellor-of-germany-is-welcomed-by-supporters-at-picture-id3324060?s=2048x2048
+// https://media.gettyimages.com/photos/adolf-hitler-in-munich-in-the-spring-of-1932-picture-id119505258?s=2048x2048
+// https://www.gettyimages.in/photos/adolf-hitler?sort=mostpopular&mediatype=photography&phrase=adolf%20hitler
+// https://media.gettyimages.com/photos/adolf-hitler-and-nazis-about-193233-colourized-photo-picture-id53401757?s=2048x2048
+
 const PollSamples = () => {
   return (
     <>
